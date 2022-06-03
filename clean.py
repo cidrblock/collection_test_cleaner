@@ -530,8 +530,8 @@ def update_list_of_tasks(list_of_tasks) -> bool:
     # updated.append(undo_debug_equal(list_of_tasks))
     # updated.append(undo_set_fact_equal(list_of_tasks))
     # updated.append(update_acronyms(list_of_tasks))
-    updated.append(update_features(list_of_tasks))
-    return any(updated)
+    # updated.append(update_features(list_of_tasks))
+    return True  # any(updated)
 
 
 def update(file_path: Path) -> None:
@@ -574,7 +574,7 @@ def update(file_path: Path) -> None:
 def main():
     """Main entry point."""
     path = Path(
-        "../collection_development/collections/ansible_collections/cisco/nxos/tests"
+        "../collection_development/collections/ansible_collections/cisco/nxos/tests/integration"
     )
     for file_path in sorted(path.rglob("*")):
         if file_path.suffix in [".yaml", ".yml"]:
