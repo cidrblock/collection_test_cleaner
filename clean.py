@@ -1,5 +1,10 @@
 # cspell:ignore dpkg, getent, lineinfile, nxapi, nxos, rglob, ruamel, sysvinit
-"""A test files updater."""
+"""A test files updater.
+
+
+NOTE: ansible-lint needs to be pathced locally for roundtrip to work
+https://github.com/ansible/ansible-lint/issues/2112
+"""
 
 import logging
 import ruamel.yaml
